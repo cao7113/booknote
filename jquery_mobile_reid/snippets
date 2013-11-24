@@ -1,0 +1,46 @@
+#==JQuery Mobile
+a platform abstraction layer like Titanium or PhoneGap.
+
+With jQuery Mobile, it is possible to quickly create mobile web applications that look
+and behave consistently across all supported devices, and that have advanced user
+interface capabilities. jQuery Mobile gives the developer a standard set of layouts, user
+interface widgets, and interactions, as well as a rich API for applying and extending
+them.
+
+You can use various emulators that come with the platform application development
+SDKs, but the ideal way to test the application is to serve it via a web server and use a
+mobile device to browse it. This will give you the best feel for how the application
+behaves.
+
+jQuery Mobile will automatically
+handle the page transition animation, and will automatically provide a back button in
+the header.
+
+#==Ch1 notes
+* 手机web apps：基于html的网页应用，增加了移动设备的元素
+* jquery mobile是jquery基础上的手机开发包，提供了基于html5和css3的便利包
+* 定制很多data-属性，用于装载数据，定位等
+* 基于data-属性的元素选择器-jmData()
+
+#讨论问题
+本地server和模拟器搭建，很
+
+#==ch2 
+load normal page
+jQuery Mobile will also handle external pages as well. If you link to a separate page
+instead of to an ID of a data-role="page" element within the current document, jQuery
+Mobile will perform an asynchronous fetch of the requested page and integrate it into
+the current document, allowing it to perform its page management functions.
+
+load external page
+Sometimes you will want to actually load a page normally, rather than having jQuery
+Mobile fetch it asynchronously and integrate it into the current DOM. You can override
+the AJAX loading in two ways: specifying a target attribute on a link (such as
+"_blank") or by specifying a rel="external" attribute on the link.
+
+
+jQuery Mobile makes use of CSS 3 transforms for animating the page transitions. As
+of this writing, jQuery Mobile uses webkit transforms, so they only work in webkit-
+based browsers. The good news is that webkit browsers use hardware acceleration to
+produce CSS animation, so the animations look smooth even on mobile devices.
+

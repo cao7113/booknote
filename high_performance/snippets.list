@@ -1,0 +1,2 @@
+//P118 原生Date对象
+var start = +new Date(); //start=1311385956759, 应该是timestamp的数字形式

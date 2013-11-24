@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+#Created by mkrb on 2013年 06月 08日 星期六 07:54:47 CST
+#Description:
+
+puts "Try a zombie subprocess"
+pid = fork { sleep 1}
+puts pid
+puts "run in another session: \'ps -o pid,state -p #{pid}\'" 
+sleep

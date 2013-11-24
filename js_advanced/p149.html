@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>
+    Test Javascript
+  </title>
+</head>
+<body>
+  Hello
+  <script>
+    
+    name="The window";    
+    
+    var obj={
+      name: "My Object",
+      vv: this, 
+      getName: function(){
+        return function(){
+          return this.name;
+        }
+      }
+    };    
+    //alert(obj.getName()());        
+    //alert(obj.vv); //window obj
+    
+    
+    //引申
+    function A(){
+      name='aaa';
+      //alert(this==window); //false
+      
+      this.hello=function(){
+        alert("in hello");
+        alert(this);     //the new object
+        alert(this.name);//aaa
+      };
+      
+      (function b(){        
+        alert(this);    //window
+        alert("in b()");
+      })();      
+      
+      return function(){
+        alert(this==window);//true
+        return name;
+      };      
+    }
+    //alert(new A()());
+    
+    a=new A();
+    //alert(a.hello());        
+    
+  </script>
+</body>
+</html>
+

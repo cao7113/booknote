@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>
+    Test Javascript
+  </title>
+</head>
+<body>
+  Hello
+  <script>
+  
+    function f1(a, b){
+      alert("in f1...");
+      return a+b;
+    }
+    
+    var f2=new Function("a", "b", "alert('in f2...'); return a+b;");
+    
+    
+    //alert(f1);
+    //alert(f2);
+    
+    alert(f1(1, 2));
+    alert(f2(1, 2));
+  </script>
+</body>
+</html>
